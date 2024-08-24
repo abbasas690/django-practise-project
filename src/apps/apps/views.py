@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 from visits.models import PageVisit
 def home(request, *args,**kwargs):
-    querySet=PageVisit.objects.filter(path=request.path)
+    querySet=PageVisit.objects.filter()
     total_query=PageVisit.objects.all()
     template_name="home.html"
     my_context={
